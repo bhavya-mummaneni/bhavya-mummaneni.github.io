@@ -45,7 +45,10 @@
     <h3>RAG Document Q&amp;A — Working Code</h3>
     <div class="org">Personal project · <a href="https://github.com/bhavya-mummaneni/rag-doc-qa">github.com/bhavya-mummaneni/rag-doc-qa</a></div>
     <p><strong>Problem:</strong> answer questions grounded in a document set, with traceable sources. <strong>Approach:</strong> LangChain ingestion and chunking, FAISS vector search, answers composed from retrieved passages with source citations, FastAPI backend and Streamlit UI. <strong>Results (sample data):</strong> a 15-question evaluation — 100% retrieval hit rate and 100% answer accuracy. <strong>Limitations:</strong> generation is extractive because the project runs without an LLM API key; the design lets an LLM swap in without changing the API or UI.</p>
-    <p>More projects are in progress, including a LangGraph agent with tool calling and an evaluation harness.</p>
+  <div class="project">
+    <h3>LangGraph Agent — Working Code</h3>
+    <div class="org">Personal project · <a href="https://github.com/bhavya-mummaneni/langgraph-agent">github.com/bhavya-mummaneni/langgraph-agent</a></div>
+    <p><strong>Problem:</strong> an agent that plans multi-step tasks, calls tools in sequence, and refuses out-of-scope requests. <strong>Approach:</strong> a LangGraph state graph (guardrail, plan, execute, respond) with three tools — document lookup with citations, a calculator, and data queries over a sample dataset — each wrapped with retries and per-call latency logging; structured outputs throughout. <strong>Results (sample data):</strong> a 15-task evaluation — 15/15 passed, including chained multi-step tasks, an expected refusal, and an error-handling case. <strong>Limitations:</strong> the planner is deterministic because the project runs without an LLM API key; an LLM planner can swap in behind the same interface.</p>
   </div>
 
   <h2>Skills</h2>
